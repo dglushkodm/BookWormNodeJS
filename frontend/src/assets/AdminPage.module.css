@@ -1,0 +1,274 @@
+.adminPage {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #181a20;
+    color: #f3f4f6;
+}
+
+/* Стили для вкладок */
+.nav-tabs {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #353945;
+}
+
+:global(.nav-tabs .nav-link.active),
+:global(.nav-tabs .nav-item.show .nav-link),
+:global(.nav-link.active) {
+    background: #23262f !important;
+    color: #fff !important;
+    border-color: #23262f #23262f #fff !important;
+    border-bottom: 3px solid #fff !important;
+    font-weight: 600;
+    border-radius: 8px 8px 0 0;
+    box-shadow: none;
+    position: relative;
+    z-index: 2;
+}
+
+:global(.nav-tabs .nav-link),
+:global(.nav-link) {
+    color: #b0b3c6 !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 8px 8px 0 0 !important;
+    transition: color 0.18s, background 0.18s;
+    font-weight: 500;
+}
+
+:global(.nav-tabs .nav-link:hover),
+:global(.nav-link:hover) {
+    color: #2563eb !important;
+    background: #23262f !important;
+}
+
+.tab-content {
+    padding: 1rem;
+    background: #23262f;
+    border: 1px solid #353945;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    color: #f3f4f6;
+}
+
+/* Общие стили для админских компонентов */
+.adminHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.adminHeader h3 {
+    margin: 0;
+    color: #f3f4f6;
+}
+
+/* Стили для таблиц */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #f3f4f6;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #353945;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #353945;
+    background: #23262f;
+    color: #f3f4f6;
+}
+
+.table tbody tr:hover {
+    background-color: #23262f;
+}
+
+/* Стили для форм */
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #f3f4f6;
+    background-color: #23262f;
+    background-clip: padding-box;
+    border: 1px solid #353945;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    color: #f3f4f6;
+    background-color: #23262f;
+    border-color: #4a4d57;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(74, 77, 87, 0.25);
+}
+
+/* Стили для кнопок */
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 4px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #4a4d57;
+    border-color: #4a4d57;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #353945;
+    border-color: #353945;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* Стили для модальных окон */
+.modal-content {
+    background-color: #23262f;
+    color: #f3f4f6;
+    border: 1px solid #353945;
+}
+
+.modal-header {
+    border-bottom: 1px solid #353945;
+}
+
+.modal-footer {
+    border-top: 1px solid #353945;
+}
+
+.modal-title {
+    color: #f3f4f6;
+}
+
+/* Стили для бейджей */
+.badge {
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+.badge-primary {
+    color: #fff;
+    background-color: #4a4d57;
+}
+
+.badge-secondary {
+    color: #fff;
+    background-color: #6c757d;
+}
+
+/* Стили для аккордеона */
+.accordion {
+    background-color: #23262f;
+    border: 1px solid #353945;
+    border-radius: 4px;
+}
+
+.accordion-item {
+    background-color: #23262f;
+    border: 1px solid #353945;
+}
+
+.accordion-button {
+    background-color: #23262f;
+    color: #f3f4f6;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #2a2d36;
+    color: #f3f4f6;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(74, 77, 87, 0.25);
+}
+
+.accordion-body {
+    background-color: #23262f;
+    color: #f3f4f6;
+}
+
+/* Стили для алертов */
+.alert {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-danger {
+    color: #f8d7da;
+    background-color: #842029;
+    border-color: #842029;
+}
+
+/* Стили для изображений */
+.img-thumbnail {
+    background-color: #23262f;
+    border: 1px solid #353945;
+}
+
+/* Стили для ссылок */
+a {
+    color: #4a4d57;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #353945;
+    text-decoration: underline;
+}
+
+/* Стили для текстовых полей */
+textarea.form-control {
+    min-height: 100px;
+}
+
+/* Стили для выпадающих списков */
+select.form-control {
+    background-color: #23262f;
+    color: #f3f4f6;
+}
+
+select.form-control option {
+    background-color: #23262f;
+    color: #f3f4f6;
+}

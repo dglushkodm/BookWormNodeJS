@@ -1,0 +1,100 @@
+.adminUsers {
+    composes: adminPage from './AdminPage.module.css';
+}
+
+.table {
+    composes: table from './AdminPage.module.css';
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    background: none;
+    border: 1px solid #353945;
+}
+
+.table th {
+    background: #23262f;
+    color: #f3f4f6;
+    font-weight: 600;
+    border-bottom: 2px solid #353945;
+    font-size: 1.08rem;
+    padding: 0.85rem 0.5rem;
+}
+
+.table td {
+    background: #23242b;
+    color: #e6e7ea;
+    border-top: 1px solid #353945;
+    font-size: 1.01rem;
+    padding: 0.7rem 0.5rem;
+    transition: background 0.18s;
+}
+
+.table tbody tr:hover td {
+    background: #23262f;
+}
+
+.table tr:not(:last-child) td {
+    border-bottom: 1px solid #353945;
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.actionButton {
+    composes: btn from './AdminPage.module.css';
+    border-radius: 7px;
+    font-size: 0.98rem;
+    padding: 0.45rem 1.1rem;
+    box-shadow: none;
+    border: none;
+    font-weight: 500;
+    transition: background 0.18s, color 0.18s;
+}
+
+.primaryButton {
+    background: #353945;
+    color: #fff;
+}
+.primaryButton:hover {
+    background: #23262f;
+    color: #fff;
+}
+
+.dangerButton {
+    background: #dc3545;
+    color: #fff;
+}
+.dangerButton:hover {
+    background: #b91c1c;
+    color: #fff;
+}
+
+/* Стили для бейджей ролей */
+.badge {
+    composes: badge from './AdminPage.module.css';
+}
+
+.adminBadge {
+    composes: badge from './AdminPage.module.css';
+    composes: badge-danger from './AdminPage.module.css';
+}
+
+.readerBadge {
+    composes: badge from './AdminPage.module.css';
+    composes: badge-primary from './AdminPage.module.css';
+}
+
+/* Стили для состояния загрузки */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Стили для сообщений об ошибках */
+.error {
+    composes: alert from './AdminPage.module.css';
+    composes: alert-danger from './AdminPage.module.css';
+    margin-top: 1rem;
+}

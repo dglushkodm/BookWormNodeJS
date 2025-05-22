@@ -1,0 +1,200 @@
+.profilePage {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.profileInfo {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.avatarSection {
+    text-align: center;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #e0e0e0;
+    transition: border-color 0.3s ease;
+}
+
+.avatar:hover {
+    border-color: #007bff;
+}
+
+.favoritesList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.favoriteBookCard {
+    display: flex;
+    align-items: center;
+    background: #18191c;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: box-shadow 0.2s;
+}
+
+.favoriteBookCard:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.16);
+}
+
+.bookCover {
+    width: 70px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 1.2rem;
+    background: #222;
+}
+
+.bookInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.bookTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.bookAuthor {
+    color: #b0b3c6;
+    font-size: 0.95rem;
+    line-height: 1.1;
+}
+
+.bookMeta {
+    font-size: 0.92rem;
+    color: #b0b0b0;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.bookDate {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.editForm {
+    background: #23242a;
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 2rem;
+    text-align: left;
+    max-width: 500px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.formGroup label {
+    color: #bfc4c9;
+    font-size: 1.08rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="email"],
+.formGroup input[type="file"] {
+    background: #18191c;
+    color: #e3e6ea;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    font-size: 1.08rem;
+    transition: border 0.2s;
+}
+
+.formGroup input[type="text"]:focus,
+.formGroup input[type="email"]:focus {
+    border: 1.5px solid #4fc3f7;
+    outline: none;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+
+.editButton {
+    background: #23242a;
+    color: #e3e6ea;
+    border: 1.5px solid #388bff;
+    border-radius: 8px;
+    padding: 0.7rem 2.2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, border 0.2s;
+    min-width: 140px;
+    margin-top: 1.2rem;
+}
+
+.editButton:hover {
+    background: #388bff;
+    color: #fff;
+    border: 1.5px solid #2566b3;
+}
+
+.saveButton,
+.cancelButton {
+    min-width: 140px;
+}
+
+.saveButton {
+    background: #388bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 2.2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.saveButton:hover {
+    background: #2566b3;
+}
+
+.cancelButton {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 2.2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cancelButton:hover {
+    background: #a71d2a;
+}

@@ -1,0 +1,191 @@
+.bookList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.bookCard {
+    background: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 0;
+    position: relative;
+    min-width: 0;
+    aspect-ratio: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bookCard:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+.bookLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.bookImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.bookInfo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(24, 26, 32, 0.82);
+    padding: 0.6rem 0.7rem 0.7rem 0.7rem;
+    border-radius: 0 0 12px 12px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    max-height: 90px;
+    transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), border-radius 0.5s, background 0.5s;
+    overflow: hidden;
+}
+
+.bookCard:hover .bookInfo {
+    max-height: 1000px;
+    border-radius: 12px;
+    background: rgba(24, 26, 32, 0.96);
+}
+
+.bookDescription {
+    opacity: 1;
+    max-height: 200px;
+    transition: opacity 0.4s, max-height 0.4s;
+    color: #e0e0e0;
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+    overflow: hidden;
+}
+
+.bookChapters {
+    opacity: 1;
+    max-height: 40px;
+    transition: opacity 0.4s, max-height 0.4s;
+    color: #b0b3c6;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+    overflow: hidden;
+}
+
+.bookTitle {
+    margin: 0 0 0.1rem;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.bookAuthor {
+    color: #b0b3c6;
+    font-size: 0.82rem;
+    line-height: 1.1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.bookMeta {
+    display: flex;
+    justify-content: space-between;
+    color: #8b8e99;
+    font-size: 0.75rem;
+    margin-top: 0.1rem;
+}
+
+.bookRating {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    left: auto;
+    color: #fff;
+    font-size: 0.92rem;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 2px 7px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.13);
+    z-index: 3;
+    letter-spacing: 0.02em;
+    backdrop-filter: blur(2px);
+}
+
+.ratingLow {
+    background: rgba(220, 53, 69, 0.82);
+}
+
+.ratingMedium {
+    background: rgba(255, 193, 7, 0.82);
+}
+
+.ratingHigh {
+    background: rgba(34, 197, 94, 0.82);
+}
+
+.noBooks {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem;
+    color: #7f8c8d;
+}
+
+.bookExtra {
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.4s, max-height 0.4s;
+    overflow: hidden;
+}
+
+.bookCard:hover .bookExtra {
+    opacity: 1;
+    max-height: 200px;
+}
+
+@media (max-width: 768px) {
+    .bookList {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    }
+    .bookCard {
+        border-radius: 8px;
+    }
+    .bookImage {
+        border-radius: 8px;
+    }
+    .bookInfo {
+        border-radius: 0 0 8px 8px;
+        padding: 0.5rem 0.5rem 0.6rem 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bookList {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .bookCard {
+        border-radius: 6px;
+    }
+    .bookImage {
+        border-radius: 6px;
+    }
+    .bookInfo {
+        border-radius: 0 0 6px 6px;
+        padding: 0.4rem 0.4rem 0.5rem 0.4rem;
+    }
+}

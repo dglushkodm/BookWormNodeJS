@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "dba",
+    "password": "12345",
+    "database": "online_library",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "dba",
+    "password": "12345",
+    "database": "online_library",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "dba",
+    "password": "12345",
+    "database": "online_library",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

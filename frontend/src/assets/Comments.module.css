@@ -1,0 +1,165 @@
+.commentsSection {
+    background: #23242a;
+    border-radius: 12px;
+    padding: 2rem;
+    color: #e3e6ea;
+}
+
+.commentForm {
+    margin-bottom: 2rem;
+}
+
+.commentForm textarea {
+    width: 100%;
+    min-height: 80px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #18191c;
+    color: #e3e6ea;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    resize: vertical;
+}
+
+.commentForm button {
+    background: #388bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.commentForm button:hover {
+    background: #2566b3;
+}
+
+.commentsList {
+    margin-top: 2rem;
+}
+
+.comment {
+    background: #18191c;
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.2rem;
+    color: #e3e6ea;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+}
+
+.commentHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.userAvatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #23242a;
+}
+
+.userName {
+    font-weight: 500;
+    color: #4fc3f7;
+}
+
+.commentDate {
+    color: #bfc4c9;
+    font-size: 0.95rem;
+}
+
+.commentContent {
+    margin: 0.5rem 0 0.2rem 0;
+    color: #e3e6ea;
+}
+
+.commentActions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.75rem;
+}
+
+.commentActions button {
+    background: none;
+    border: none;
+    color: #4fc3f7;
+    cursor: pointer;
+    margin-right: 1rem;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.commentActions button:hover {
+    color: #fff;
+}
+
+.editForm {
+    margin-top: 0.5rem;
+}
+
+.editForm textarea {
+    width: 100%;
+    min-height: 80px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #18191c;
+    color: #e3e6ea;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    resize: vertical;
+}
+
+.editButtons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.editButtons button[type="submit"] {
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.4rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.editButtons button[type="submit"]:hover {
+    background: #218838;
+}
+
+.editButtons button[type="button"] {
+    background: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.4rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.editButtons button[type="button"]:hover {
+    background: #5a6268;
+}
+
+.noComments {
+    color: #bfc4c9;
+    text-align: center;
+    margin-top: 2rem;
+} 

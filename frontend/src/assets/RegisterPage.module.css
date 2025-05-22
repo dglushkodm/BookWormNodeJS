@@ -1,0 +1,109 @@
+.registerPage {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #23262f;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+    color: #f3f4f6;
+}
+
+.registerPage h1 {
+    color: #f3f4f6;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+.registerForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formGroup label {
+    font-weight: 500;
+    color: #b0b3c6;
+    font-size: 0.98rem;
+}
+
+.formGroup input {
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #353945;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #181a20;
+    color: #f3f4f6;
+    transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+.formGroup input:focus {
+    outline: none;
+    border-color: #3772ff;
+    box-shadow: 0 0 0 2px rgba(55,114,255,0.13);
+}
+
+.error {
+    color: #e74c3c;
+    padding: 0.75rem;
+    background: #2c2323;
+    border-radius: 8px;
+    border: 1px solid #a94442;
+    margin-bottom: 1rem;
+}
+
+button[type="submit"] {
+    background: #3772ff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.18s;
+    box-shadow: 0 2px 8px rgba(55,114,255,0.08);
+}
+
+button[type="submit"]:hover {
+    background: #2553b8;
+}
+
+button[type="submit"]:disabled {
+    background: #353945;
+    cursor: not-allowed;
+}
+
+.loginLink {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #b0b3c6;
+}
+
+.loginLink a {
+    color: #3772ff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.18s;
+}
+
+.loginLink a:hover {
+    color: #2553b8;
+    text-decoration: underline;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 576px) {
+    .registerPage {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+}

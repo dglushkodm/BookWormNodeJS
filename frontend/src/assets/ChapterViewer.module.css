@@ -1,0 +1,109 @@
+.chapterViewer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.header {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.backLink {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #666;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.backLink:hover {
+    color: #333;
+}
+
+.chapterViewer h2 {
+    margin: 0;
+    color: #333;
+    font-size: 1.8rem;
+    line-height: 1.4;
+}
+
+.content {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.content p {
+    margin-bottom: 1.5em;
+}
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    margin: 1.5em 0 0.8em;
+    color: #333;
+}
+
+.content ul, .content ol {
+    margin: 1em 0;
+    padding-left: 2em;
+}
+
+.content li {
+    margin-bottom: 0.5em;
+}
+
+.content blockquote {
+    margin: 1.5em 0;
+    padding: 1em 1.5em;
+    border-left: 4px solid #ddd;
+    background-color: #f9f9f9;
+    font-style: italic;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    margin: 1.5em 0;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+}
+
+.content th, .content td {
+    padding: 0.75em;
+    border: 1px solid #ddd;
+}
+
+.content th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.content code {
+    background-color: #f5f5f5;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+.content pre {
+    background-color: #f5f5f5;
+    padding: 1em;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1.5em 0;
+}
+
+.content a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}

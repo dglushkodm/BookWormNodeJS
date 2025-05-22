@@ -1,0 +1,309 @@
+.adminBooks {
+    composes: adminPage from './AdminPage.module.css';
+}
+
+.header {
+    composes: adminHeader from './AdminPage.module.css';
+    margin-bottom: 1.5rem;
+}
+
+.addBookBtn {
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    transition: background 0.18s;
+    font-weight: 500;
+}
+.addBookBtn:hover {
+    background: #1d4ed8;
+    color: #fff;
+}
+
+.table {
+    composes: table from './AdminPage.module.css';
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    background: none;
+    border: 1px solid #353945;
+}
+
+.table th {
+    background: #23262f;
+    color: #f3f4f6;
+    font-weight: 600;
+    border-bottom: 2px solid #353945;
+    font-size: 1.08rem;
+    padding: 0.85rem 0.5rem;
+}
+
+.table td {
+    background: #23242b;
+    color: #e6e7ea;
+    border-top: 1px solid #353945;
+    font-size: 1.01rem;
+    padding: 0.7rem 0.5rem;
+    transition: background 0.18s;
+}
+
+.table tbody tr:hover td {
+    background: #23262f;
+}
+
+.table tr:not(:last-child) td {
+    border-bottom: 1px solid #353945;
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.actionButton,
+.primaryButton,
+.dangerButton,
+.neutralButton {
+    --bs-btn-hover-border-color: transparent !important;
+    --bs-btn-focus-border-color: transparent !important;
+    --bs-btn-border-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.actionButton {
+    composes: btn from './AdminPage.module.css';
+    border-radius: 7px;
+    font-size: 0.98rem;
+    padding: 0.45rem 1.1rem;
+    box-shadow: none;
+    font-weight: 500;
+    transition: background 0.18s, color 0.18s;
+}
+
+.primaryButton {
+    background: #353945;
+    color: #fff;
+}
+.primaryButton:hover {
+    background: #23262f;
+    color: #fff;
+}
+
+.dangerButton {
+    background: #dc3545;
+    color: #fff;
+}
+.dangerButton:hover {
+    background: #b91c1c;
+    color: #fff;
+}
+
+.neutralButton {
+    background: #38bdf8;
+    color: #181a20;
+    border: none;
+    transition: background 0.18s, color 0.18s;
+}
+.neutralButton:hover {
+    background: #0ea5e9;
+    color: #fff;
+}
+
+/* --- Модальное окно и форма --- */
+:global(.modal-content) {
+    background: #23242b;
+    color: #f3f4f6;
+    border: 1px solid #353945;
+    border-radius: 10px;
+}
+:global(.modal-header), :global(.modal-footer) {
+    border-color: #353945;
+}
+:global(.modal-title) {
+    color: #f3f4f6;
+}
+
+.form-control, .form-select {
+    background: #23262f;
+    color: #f3f4f6;
+    border: 1px solid #353945;
+    border-radius: 6px;
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+    transition: border-color 0.18s, box-shadow 0.18s;
+}
+.form-control:focus, .form-select:focus {
+    background: #23262f;
+    color: #f3f4f6;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px #2563eb33;
+}
+.form-label {
+    color: #bfc2cb;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+:global(.modal-footer) .btn {
+    min-width: 110px;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.45rem 1.1rem;
+    transition: background 0.18s, color 0.18s;
+}
+:global(.modal-footer) .btn-primary {
+    background: #2563eb;
+    border: none;
+}
+:global(.modal-footer) .btn-primary:hover {
+    background: #1d4ed8;
+}
+:global(.modal-footer) .btn-secondary {
+    background: #353945;
+    border: none;
+    color: #fff;
+}
+:global(.modal-footer) .btn-secondary:hover {
+    background: #23262f;
+    color: #fff;
+}
+
+/* Стили для превью изображений */
+.imagePreview {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #23262f;
+    border: 1px solid #353945;
+    border-radius: 4px;
+}
+
+.imagePreview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Стили для выбора жанров */
+.genreSelector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.genreButton {
+    composes: btn from './AdminPage.module.css';
+    padding: 0.25rem 0.7rem;
+    font-size: 0.92rem;
+    border: 1.5px solid #38bdf8 !important;
+    border-color: #38bdf8 !important;
+    background: transparent;
+    color: #38bdf8;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background 0.18s, color 0.18s, border-color 0.18s;
+    box-shadow: none;
+}
+.genreButton.selected {
+    background: #38bdf8;
+    color: #181a20;
+    border-color: #38bdf8;
+}
+.genreButton:hover {
+    background: #0ea5e9;
+    color: #fff;
+    border-color: #0ea5e9;
+}
+
+.input {
+    background: #23262f !important;
+    color: #f3f4f6 !important;
+    border: 1px solid #353945 !important;
+    border-radius: 6px !important;
+    font-size: 1rem !important;
+    padding: 0.5rem 0.75rem !important;
+    transition: border-color 0.18s, box-shadow 0.18s !important;
+}
+.input:focus {
+    background: #23262f !important;
+    color: #f3f4f6 !important;
+    border-color: #2563eb !important;
+    box-shadow: 0 0 0 2px #2563eb33 !important;
+}
+
+.actionButton:focus, .actionButton:active, .actionButton:hover:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.neutralButton:focus, .neutralButton:active, .neutralButton:hover:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.primaryButton:focus, .primaryButton:active, .primaryButton:hover:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.dangerButton:focus, .dangerButton:active, .dangerButton:hover:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+:global(.btn:focus),
+:global(.btn:active),
+:global(.btn:focus-visible),
+:global(.btn:focus:active),
+:global(.btn-primary:focus),
+:global(.btn-danger:focus),
+:global(.btn-warning:focus),
+:global(.btn:focus:not(:focus-visible)),
+:global(.btn:hover:focus) {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.chapterPanel {
+    background: #23242b !important;
+    color: #f3f4f6 !important;
+    border: 1px solid #353945 !important;
+    border-radius: 8px !important;
+    margin-bottom: 0.7rem;
+    box-shadow: none !important;
+}
+:global(.chapterPanel .accordion-header) {
+    background: #23262f !important;
+    color: #f3f4f6 !important;
+    border-radius: 8px 8px 0 0 !important;
+}
+:global(.chapterPanel .accordion-button) {
+    background: #23262f !important;
+    color: #f3f4f6 !important;
+    border-radius: 8px 8px 0 0 !important;
+    box-shadow: none !important;
+}
+:global(.chapterPanel .accordion-button:not(.collapsed)) {
+    background: #23262f !important;
+    color: #fff !important;
+}
+:global(.chapterPanel .accordion-body) {
+    background: #23242b !important;
+    color: #f3f4f6 !important;
+    border-radius: 0 0 8px 8px !important;
+}
+
+:global(.accordion-item),
+:global(.accordion-header),
+:global(.accordion-button),
+:global(.accordion-body) {
+    background: #23242b !important;
+    color: #f3f4f6 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+:global(.accordion-button:not(.collapsed)) {
+    background: #23262f !important;
+    color: #fff !important;
+}

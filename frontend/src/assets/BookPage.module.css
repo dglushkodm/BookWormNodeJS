@@ -1,0 +1,182 @@
+.bookPage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.bookHeader {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.bookImage {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bookInfo {
+    flex: 1;
+}
+
+.bookInfo h1 {
+    margin: 0 0 1rem 0;
+    font-size: 2.4rem;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.bookInfo p {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+.ratingContainer {
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.averageRating {
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+}
+
+.ratingValue {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #FFD600;
+}
+
+.ratingMax {
+    color: #666;
+}
+
+.ratingStars {
+    color: #FFD600;
+    font-size: 1.7rem;
+    margin-left: 0.5rem;
+}
+
+.favoriteButton {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.favoriteButton:hover {
+    background-color: #0056b3;
+}
+
+.favoriteButton.favorited {
+    background-color: #28a745;
+}
+
+.favoriteButton.favorited:hover {
+    background-color: #218838;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #222;
+    background: #18191c;
+    padding: 0 16px;
+}
+
+.tabs button {
+    background: none;
+    border: none;
+    color: #bfc4c9;
+    font-size: 1.1rem;
+    padding: 16px 24px 12px 24px;
+    cursor: pointer;
+    transition: color 0.2s;
+    position: relative;
+    outline: none;
+}
+
+.tabs button:not(:last-child) {
+    margin-right: 8px;
+}
+
+.tabs button:hover,
+.tabs button:focus {
+    color: #fff;
+}
+
+.tabs button.active {
+    color: #4fc3f7;
+    font-weight: 500;
+}
+
+.tabs button.active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 0;
+    height: 3px;
+    border-radius: 2px 2px 0 0;
+    background: #4fc3f7;
+}
+
+.tabContent {
+    background-color: #23242a;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    color: #e3e6ea;
+    margin-top: 2rem;
+}
+
+.tabContent h3 {
+    color: #fff;
+}
+
+.tabContent p {
+    color: #bfc4c9;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .bookHeader {
+        flex-direction: column;
+    }
+
+    .bookImage {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+    }
+
+    .tabs button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bookPage {
+        padding: 0 0.5rem;
+    }
+
+    .ratingContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tabs {
+        overflow-x: auto;
+    }
+}

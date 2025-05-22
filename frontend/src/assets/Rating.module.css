@@ -1,0 +1,25 @@
+.rating {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    gap: 0.2rem;
+}
+
+.ratingStars {
+    display: inline-flex;
+    gap: 5px;
+}
+
+.star {
+    font-size: 1.8rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.star.filled {
+    color: #ffc107;
+}
+
+.star:hover {
+    transform: scale(1.1);
+}
