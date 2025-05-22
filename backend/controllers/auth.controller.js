@@ -16,7 +16,6 @@ const generateToken = (id, role) => {
 class AuthController {
     async register(req, res, next) {
         try {
-
             const { username, email, password } = req.body;
 
             const existingUser = await db.User.findOne({ where: { email } });
@@ -25,28 +24,23 @@ class AuthController {
             }
             const hashedPassword = await bcrypt.hash(password, 10);
 
-            const defaultImagePath = path.join('E:/NodeJSCurs3/BookWorm2/backend/materials/images/defaultUser2.jpg'); // Укажите правильный путь
-            const defaultImage = fs.readFileSync(defaultImagePath);
+            // Download default image from Dropbox
+            const defaultImageUrl = 'https://www.dropbox.com/scl/fi/8nsi03tet9f0j13kse4yd/defaultUser.png?rlkey=6bh6bsogmextjby72wswkszco&st=z5vx9jfa&raw=1';
+            const response = await fetch(defaultImageUrl);
+            const imageBuffer = await response.arrayBuffer();
 
-            const user = await db.User.create({
+            await db.User.create({
                 name: username,
                 email: email,
                 password: hashedPassword,
                 role: 'reader',
-                image: defaultImage,
+                image: Buffer.from(imageBuffer),
                 createdAt: Date.now(),
                 updatedAt: Date.now()
             });
 
-            const token = generateToken(user.id, user.role);
-
             res.status(201).json({
-                id: user.id,
-                name: user.name,
-                email: user.email,
-                role: user.role,
-                image: user.image.toString('base64'),
-                token
+                message: 'Регистрация успешно завершена'
             });
         } catch (error) {
             next(error);

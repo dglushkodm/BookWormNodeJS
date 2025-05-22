@@ -1,0 +1,16 @@
+{
+  "name": "bookworm2",
+  "version": "1.0.0",
+  "description": "BookWorm2 application",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "heroku-postbuild": "cd frontend && npm install && npm run build && cd ../backend && npm install",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\""
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "concurrently": "^8.0.1"
+  }
+} 

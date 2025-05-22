@@ -3,7 +3,7 @@
     "username": "dba",
     "password": "12345",
     "database": "online_library",
-    "host": "127.0.0.1",
+    "host": "SG-BookWormDB-12603-mysql-master.servers.mongodirector.com",
     "dialect": "mysql"
   },
   "test": {

@@ -36,7 +36,14 @@ function ProfilePage() {
         } catch (error) {
             console.error('Error processing avatar:', error);
         }
-        return 'http://localhost:3000/images/defaultUser.jpg';
+        // Download and convert default image to blob
+        fetch('https://www.dropbox.com/scl/fi/8nsi03tet9f0j13kse4yd/defaultUser.png?rlkey=6bh6bsogmextjby72wswkszco&st=z5vx9jfa&raw=1')
+            .then(response => response.blob())
+            .then(blob => URL.createObjectURL(blob))
+            .catch(error => {
+                console.error('Error loading default avatar:', error);
+                return null;
+            });
     };
 
     const handleInputChange = (e) => {
@@ -87,7 +94,7 @@ function ProfilePage() {
                         alt="Аватар"
                         className={styles.avatar}
                         onError={(e) => {
-                            e.target.src = 'E:/NodeJSCurs3/BookWorm2/backend/materials/images/defaultUser.jpg';
+                            e.target.src = 'https://www.dropbox.com/scl/fi/8nsi03tet9f0j13kse4yd/defaultUser.png?rlkey=6bh6bsogmextjby72wswkszco&st=z5vx9jfa&raw=1';
                         }}
                     />
                     {isEditing ? (

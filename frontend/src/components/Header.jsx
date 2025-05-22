@@ -15,7 +15,16 @@ function Header() {
     };
 
     const getAvatarUrl = () => {
-        if (!user?.image) return null;
+        if (!user?.image) {
+            // Download and convert default image to blob
+            return fetch('https://www.dropbox.com/scl/fi/8nsi03tet9f0j13kse4yd/defaultUser.png?rlkey=6bh6bsogmextjby72wswkszco&st=z5vx9jfa&raw=1')
+                .then(response => response.blob())
+                .then(blob => URL.createObjectURL(blob))
+                .catch(error => {
+                    console.error('Error loading default avatar:', error);
+                    return null;
+                });
+        }
         try {
             if (Array.isArray(user.image)) {
                 const blob = new Blob([new Uint8Array(user.image)], { type: 'image/jpeg' });
@@ -50,7 +59,7 @@ function Header() {
                                         alt="Avatar" 
                                         className={styles.avatar}
                                         onError={(e) => {
-                                            e.target.src = 'E:/NodeJSCurs3/BookWorm2/backend/materials/images/defaultUser.jpg';
+                                            e.target.src = 'https://www.dropbox.com/scl/fi/8nsi03tet9f0j13kse4yd/defaultUser.png?rlkey=6bh6bsogmextjby72wswkszco&st=z5vx9jfa&raw=1';
                                         }}
                                     />
                                 ) : (

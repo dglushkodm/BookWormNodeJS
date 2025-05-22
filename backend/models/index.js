@@ -11,7 +11,13 @@ const sequelize = new Sequelize(
     {
       host: dbConfig.host,
       dialect: dbConfig.dialect,
-      logging: false
+      logging: false,
+      dialectOptions: {
+        ssl: {
+          require: true,
+          rejectUnauthorized: false // В продакшене лучше установить в true
+        }
+      }
     }
 );
 

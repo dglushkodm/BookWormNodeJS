@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { register } from '../store/authSlice';
+import { toast } from 'react-toastify';
 import styles from '../assets/RegisterPage.module.css';
 
 function RegisterPage() {
@@ -18,19 +19,20 @@ function RegisterPage() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (formData.password !== formData.confirmPassword) {
-            alert('Пароли не совпадают');
+            toast.error('Пароли не совпадают');
             return;
         }
         try {
-            console.log(formData);
             await dispatch(register({
                 username: formData.username,
                 email: formData.email,
                 password: formData.password
             })).unwrap();
+            toast.success('Регистрация успешно завершена! Теперь вы можете войти в систему.');
             navigate('/login');
         } catch (err) {
             console.error('Ошибка регистрации:', err);
+            toast.error(err.message || 'Ошибка при регистрации');
         }
     };
 
